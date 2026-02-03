@@ -37,27 +37,27 @@
     "@shopify/theme-predictive-search": "^4.1.1",
     "@shopify/theme-product": "^4.1.0",
     "@shopify/theme-product-form": "^4.1.1",
-    "bootstrap": "^5.0.2",
-    "jquery": "^3.6.0",
+    "bootstrap": "^5.3.8",
+    "jquery": "^4.0.0",
     "lodash": "^4.17.21",
-    "smartmenus": "^1.1.1",
+    "smartmenus": "^2.0.0-alpha.1",
     "smartmenus-bootstrap-4": "^0.1.0",
-    "swiper": "^6.8.0",
+    "swiper": "^12.1.0",
     "with-elements": "^1.0.0"
   },
   "devDependencies": {
-    "@namics/stylelint-bem": "^6.3.4",
-    "@symfony/webpack-encore": "^1.5.0",
-    "core-js": "^3.16.1",
-    "eslint": "^7.32.0",
-    "jest": "^27.0.6",
+    "@symfony/webpack-encore": "^5.3.1",
+    "core-js": "^3.48.0",
+    "eslint": "^9.39.2",
+    "jest": "^30.2.0",
     "npm-run-all": "^4.1.5",
-    "postcss-loader": "^5.0.0",
-    "postcss-preset-env": "^6.7.0",
-    "prettier": "^2.3.2",
-    "sass": "^1.37.5",
-    "sass-loader": "^12.0.0",
-    "stylelint": "^13.13.1"
+    "postcss-loader": "^8.2.0",
+    "postcss-preset-env": "^11.1.2",
+    "prettier": "^3.8.1",
+    "sass": "^1.97.3",
+    "sass-loader": "^16.0.6",
+    "stylelint": "^16.26.1",
+    "stylelint-selector-bem-pattern": "^4.0.1"
   },
   "browserslist": {
     "production": [
@@ -95,17 +95,11 @@
   },
   "stylelint": {
     "plugins": [
-      "@namics/stylelint-bem"
+      "stylelint-selector-bem-pattern"
     ],
     "rules": {
-      "max-nesting-depth": 2,
-      "plugin/stylelint-bem-namics": {
-        "patternPrefixes": [
-          "layout",
-          "snippet",
-          "section",
-          "template"
-        ]
+      "plugin/selector-bem-pattern": {
+        "preset": "bem"
       }
     }
   }
